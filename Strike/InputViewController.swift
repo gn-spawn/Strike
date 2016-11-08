@@ -39,6 +39,7 @@ class InputViewController: UIViewController {
         } catch {
             print("Failed")
         }
+        self.navigationController?.popToRootViewController(animated: true)
     }
 
     /*

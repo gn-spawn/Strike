@@ -22,6 +22,20 @@ class TodoTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        do {
+            let realm = try Realm()
+            todoItem = realm.objects(ToDo.self)
+            tableView.reloadData()
+            print("OK")
+        } catch {
+            
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+        print("リロードしたぞ")
     }
 
     override func didReceiveMemoryWarning() {
