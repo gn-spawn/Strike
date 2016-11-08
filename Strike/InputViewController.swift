@@ -10,13 +10,14 @@ import UIKit
 import RealmSwift
 
 class InputViewController: UIViewController {
-    @IBAction func titleField(_ sender: Any) {
-    }
+
+    @IBOutlet weak var titleTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        titleTextField.frame.size.width = 30
     }
 
     override func didReceiveMemoryWarning() {
