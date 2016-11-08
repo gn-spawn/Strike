@@ -26,6 +26,19 @@ class InputViewController: UIViewController {
     }
     
     @IBAction func addTodo(_ sender: Any) {
+        let newTodo = ToDo()
+        
+        newTodo.title = titleTextField.text!
+        
+        do {
+            let realm = try Realm()
+            try realm.write({ () -> Void in
+                realm.add(newTodo)
+                print("Todo Saved")
+            })
+        } catch {
+            print("Failed")
+        }
     }
 
     /*

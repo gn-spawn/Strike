@@ -10,6 +10,9 @@ import UIKit
 import RealmSwift
 
 class TodoTableViewController: UITableViewController {
+    
+    var todoItem: Results<ToDo>!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
