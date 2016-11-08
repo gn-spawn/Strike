@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class InputViewController: UIViewController {
     @IBAction func titleField(_ sender: Any) {

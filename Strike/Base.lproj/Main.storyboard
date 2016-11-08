@@ -57,7 +57,7 @@
         <!--Title-->
         <scene sceneID="Qgt-rZ-aaB">
             <objects>
-                <tableViewController id="7Eo-cB-X6T" sceneMemberID="viewController">
+                <tableViewController id="7Eo-cB-X6T" customClass="TodoTableViewController" customModule="Strike" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="V6p-tP-6hr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,14 +73,14 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="7Eo-cB-X6T" id="hUe-BA-LGg"/>
-                            <outlet property="delegate" destination="7Eo-cB-X6T" id="c2d-0z-HeM"/>
+                            <outlet property="dataSource" destination="7Eo-cB-X6T" id="cfv-We-eKM"/>
+                            <outlet property="delegate" destination="7Eo-cB-X6T" id="azm-3U-XH7"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="Klb-YD-bhT">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="X6y-2Y-k5E">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="3LD-tW-Z4E"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="toInputVC" id="3LD-tW-Z4E"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
