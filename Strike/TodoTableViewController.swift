@@ -13,6 +13,18 @@ class TodoTableViewController: UITableViewController {
 
     var todoItem: Results<ToDo>!
     
+    // for UIcolor
+    struct UIColorUtil {
+        static func rgb(rgbValue: UInt) -> UIColor {
+            return UIColor(
+                red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+                green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+                blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+                alpha: CGFloat(1.0)
+            )
+        }
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,15 +66,14 @@ class TodoTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return todoItem.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier: "Cell")
         
         let object = todoItem[indexPath.row]
         cell.textLabel?.text = object.title
+        cell.backgroundColor = UIColorUtil.rgb(rgbValue: 0xedf3ff)
 
-        print(11111)
         return cell
     }
  
