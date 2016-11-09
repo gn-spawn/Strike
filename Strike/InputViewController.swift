@@ -17,7 +17,7 @@ class InputViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        titleTextField.frame.size.width = 30
+        titleTextField.frame.size.width = 114
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,7 +39,7 @@ class InputViewController: UIViewController {
         } catch {
             print("Failed")
         }
-        self.navigationController?.popToRootViewController(animated: true)
+        _ = self.navigationController?.popToRootViewController(animated: true)
     }
 
     /*
