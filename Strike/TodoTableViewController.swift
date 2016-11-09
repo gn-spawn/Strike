@@ -10,13 +10,13 @@ import UIKit
 import RealmSwift
 
 class TodoTableViewController: UITableViewController {
-    
+
     var todoItem: Results<ToDo>!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -45,10 +45,10 @@ class TodoTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -62,6 +62,7 @@ class TodoTableViewController: UITableViewController {
         let object = todoItem[indexPath.row]
         cell.textLabel?.text = object.title
 
+        print(11111)
         return cell
     }
  

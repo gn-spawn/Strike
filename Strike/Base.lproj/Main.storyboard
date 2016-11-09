@@ -54,16 +54,16 @@
             </objects>
             <point key="canvasLocation" x="1308" y="589.65517241379314"/>
         </scene>
-        <!--Title-->
+        <!--Todo-->
         <scene sceneID="Qgt-rZ-aaB">
             <objects>
-                <tableViewController id="7Eo-cB-X6T" customClass="TodoTableViewController" customModule="Strike" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Todo" id="7Eo-cB-X6T" customClass="TodoTableViewController" customModule="Strike" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="V6p-tP-6hr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KbT-Go-Eq0">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="KbT-Go-Eq0">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KbT-Go-Eq0" id="w7y-1T-4qR">
@@ -73,8 +73,8 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="7Eo-cB-X6T" id="cfv-We-eKM"/>
-                            <outlet property="delegate" destination="7Eo-cB-X6T" id="azm-3U-XH7"/>
+                            <outlet property="dataSource" destination="7Eo-cB-X6T" id="X4D-2s-SMK"/>
+                            <outlet property="delegate" destination="7Eo-cB-X6T" id="vVm-bp-un4"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="Klb-YD-bhT">
