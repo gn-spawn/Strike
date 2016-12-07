@@ -15,13 +15,12 @@ class InputViewController: UIViewController {
     @IBOutlet weak var deadLineDateField: UITextField!
     var toolBar: UIToolbar!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         titleTextField.frame.size.width = 114
-        
+    
         
         // DatePicerの上の完了ボタン
         toolBar = UIToolbar()
@@ -58,20 +57,21 @@ class InputViewController: UIViewController {
         let datePickerView:UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.date
         sender.inputView = datePickerView
-        datePickerView.addTarget(self, action: Selector(("datePickerValueChanged:")), for: UIControlEvents.valueChanged)
-        
+        datePickerView.addTarget(self, action: #selector(datePickerValueChanged(sender:)), for: .valueChanged)
     }
 
     
     func datePickerValueChanged(sender:UIDatePicker) {
+        let DatePickerView : UIDatePicker = UIDatePicker()
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "ja_JP")
-//        dateFormatter.dateStyle = CFDateFormatterStyle.mediumStyle
-        deadLineDateField.text = dateFormatter.string(from: sender.date)
+        deadLineDateField.text = dateFormatter.string(for: DatePickerView.date)
     }
     
     func doneBtn() {
         deadLineDateField.resignFirstResponder()
+        print(deadLineDateField.text!)
+        
     }
 
     /*
