@@ -1,0 +1,15 @@
+
+/* Class = "UITableViewController"; title = "Todo"; ObjectID = "7Eo-cB-X6T"; */
+"7Eo-cB-X6T.title" = "Todo";
+
+/* Class = "UILabel"; text = "タイトル"; ObjectID = "At4-hy-Ade"; */
+"At4-hy-Ade.text" = "タイトル";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "Klb-YD-bhT"; */
+"Klb-YD-bhT.title" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Add"; ObjectID = "TiN-6s-hZb"; */
+"TiN-6s-hZb.normalTitle" = "Add";
+
+/* Class = "UILabel"; text = "締め切り"; ObjectID = "gbv-cR-eR2"; */
+"gbv-cR-eR2.text" = "締め切り";

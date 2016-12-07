@@ -11,4 +11,6 @@ import RealmSwift
 
 class ToDo: Object {
     dynamic var title = ""
+//    dynamic var deadLine
+    
 }

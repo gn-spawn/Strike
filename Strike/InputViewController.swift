@@ -12,12 +12,23 @@ import RealmSwift
 class InputViewController: UIViewController {
 
     @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var deadLineDateField: UITextField!
+    var toolBar: UIToolbar!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         titleTextField.frame.size.width = 114
+        
+        
+        // DatePicerの上の完了ボタン
+        toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        let toolBarBtn = UIBarButtonItem(title: "完了", style: .plain, target: self, action: #selector(InputViewController.doneBtn))
+        toolBar.items = [toolBarBtn]
+        deadLineDateField.inputAccessoryView = toolBar
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +51,27 @@ class InputViewController: UIViewController {
             print("Failed")
         }
         _ = self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    // textFieldをDatepickerで編集したい
+    @IBAction func textFieldEditing(_ sender: UITextField) {
+        let datePickerView:UIDatePicker = UIDatePicker()
+        datePickerView.datePickerMode = UIDatePickerMode.date
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: Selector(("datePickerValueChanged:")), for: UIControlEvents.valueChanged)
+        
+    }
+
+    
+    func datePickerValueChanged(sender:UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ja_JP")
+//        dateFormatter.dateStyle = CFDateFormatterStyle.mediumStyle
+        deadLineDateField.text = dateFormatter.string(from: sender.date)
+    }
+    
+    func doneBtn() {
+        deadLineDateField.resignFirstResponder()
     }
 
     /*
