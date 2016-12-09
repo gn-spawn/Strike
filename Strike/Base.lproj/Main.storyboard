@@ -48,15 +48,22 @@
         <scene sceneID="Nys-dM-Jta">
             <objects>
                 <viewController id="QHH-c1-USp" customClass="EditViewController" customModule="Strike" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ehL-dK-FUt">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="ehL-dK-FUt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <connections>
                             <outlet property="dataSource" destination="QHH-c1-USp" id="KCf-1F-mRe"/>
                             <outlet property="delegate" destination="QHH-c1-USp" id="JK2-LF-gAb"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="iYM-Ng-Lhe">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="oJs-oK-pLG">
+                            <connections>
+                                <action selector="onSave:" destination="QHH-c1-USp" id="N9l-Zv-Ggh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GNu-eH-Pb9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

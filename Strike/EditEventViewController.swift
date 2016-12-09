@@ -8,15 +8,47 @@
 
 import Foundation
 import Eureka
+import RealmSwift
 
 class EditViewController: FormViewController {
+
+    
+    @IBAction func onSave(_ sender: UIBarButtonItem) {
+        // バリデーションする必要あり
+        let row: TextRow? = form.rowBy(tag: "EventTitleRow")
+        let toDo = ToDo()
+        toDo.title = (row?.value)!
+        
+        do {
+            let reaml = try Realm()
+            try reaml.write({ () -> Void in
+                reaml.add(toDo)
+            })
+        } catch  {
+            print("保存失敗")
+        }
+        // ルートビューへ戻る
+        _ = self.navigationController?.popToRootViewController(animated: true)
+
+//        print(type(of: row?.value) ?? "イベント名が入ってない")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Eurekaを使ったフォーム生成
         form +++ Section()
             <<< TextRow("TextField") {
+                $0.tag = "EventTitleRow"
                 $0.placeholder = "イベント名"
-        }
+                }
+        
+            +++ Section()
+            <<< DateRow {
+                $0.tag = "DateRow"
+                $0.title = "発売日"
+                $0.value = Date()
+                }
+
     }
 }
