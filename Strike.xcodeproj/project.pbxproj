@@ -13,9 +13,10 @@
 		9A33AA951DD1E16300F89BC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A33AA931DD1E16300F89BC6 /* Main.storyboard */; };
 		9A33AA971DD1E16300F89BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A33AA961DD1E16300F89BC6 /* Assets.xcassets */; };
 		9A33AA9A1DD1E16300F89BC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A33AA981DD1E16300F89BC6 /* LaunchScreen.storyboard */; };
+		9AAAC9351DFABDD700477778 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAC9341DFABDD700477778 /* CustomCell.swift */; };
 		9AD5C3991DD1E390002194F8 /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5C3981DD1E390002194F8 /* TodoTableViewController.swift */; };
-		9AD5C39B1DD1E58C002194F8 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5C39A1DD1E58C002194F8 /* InputViewController.swift */; };
 		9AD5C39D1DD1E8FB002194F8 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5C39C1DD1E8FB002194F8 /* ToDo.swift */; };
+		9AF6228F1DFAC81700106ABC /* EditEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6228E1DFAC81700106ABC /* EditEventViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +31,10 @@
 		9A33AA9B1DD1E16300F89BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A54CB611DD33EBD00154874 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		9A54CB621DD33EBD00154874 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9AAAC9341DFABDD700477778 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		9AD5C3981DD1E390002194F8 /* TodoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
-		9AD5C39A1DD1E58C002194F8 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		9AD5C39C1DD1E8FB002194F8 /* ToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		9AF6228E1DFAC81700106ABC /* EditEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditEventViewController.swift; sourceTree = "<group>"; };
 		D175ACECF83812157335B247 /* Pods-Strike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Strike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Strike/Pods-Strike.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,8 +95,9 @@
 				9A33AA981DD1E16300F89BC6 /* LaunchScreen.storyboard */,
 				9A33AA9B1DD1E16300F89BC6 /* Info.plist */,
 				9AD5C3981DD1E390002194F8 /* TodoTableViewController.swift */,
-				9AD5C39A1DD1E58C002194F8 /* InputViewController.swift */,
 				9AD5C39C1DD1E8FB002194F8 /* ToDo.swift */,
+				9AAAC9341DFABDD700477778 /* CustomCell.swift */,
+				9AF6228E1DFAC81700106ABC /* EditEventViewController.swift */,
 			);
 			path = Strike;
 			sourceTree = "<group>";
@@ -106,12 +109,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A33AA9E1DD1E16300F89BC6 /* Build configuration list for PBXNativeTarget "Strike" */;
 			buildPhases = (
+				F4B24A14FE0568639145C5D0 /* 📦 Check Pods Manifest.lock */,
 				1B321CFB0F1D8A701700122C /* [CP] Check Pods Manifest.lock */,
 				9A33AA881DD1E16300F89BC6 /* Sources */,
 				9A33AA891DD1E16300F89BC6 /* Frameworks */,
 				9A33AA8A1DD1E16300F89BC6 /* Resources */,
 				CE7A4B0821B414385F8D6A44 /* [CP] Embed Pods Frameworks */,
 				DB151078D6C91B7D95879C07 /* [CP] Copy Pods Resources */,
+				B17BBB77153EC5B7F160F1DD /* 📦 Embed Pods Frameworks */,
+				96B807FFD8D397F04C6AAA29 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,6 +191,36 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		96B807FFD8D397F04C6AAA29 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Strike/Pods-Strike-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B17BBB77153EC5B7F160F1DD /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Strike/Pods-Strike-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CE7A4B0821B414385F8D6A44 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,6 +251,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Strike/Pods-Strike-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F4B24A14FE0568639145C5D0 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -225,8 +276,9 @@
 				9A33AA921DD1E16300F89BC6 /* ViewController.swift in Sources */,
 				9AD5C39D1DD1E8FB002194F8 /* ToDo.swift in Sources */,
 				9AD5C3991DD1E390002194F8 /* TodoTableViewController.swift in Sources */,
+				9AF6228F1DFAC81700106ABC /* EditEventViewController.swift in Sources */,
 				9A33AA901DD1E16300F89BC6 /* AppDelegate.swift in Sources */,
-				9AD5C39B1DD1E58C002194F8 /* InputViewController.swift in Sources */,
+				9AAAC9351DFABDD700477778 /* CustomCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

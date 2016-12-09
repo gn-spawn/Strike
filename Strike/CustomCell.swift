@@ -1,0 +1,24 @@
+//
+//  CustomCell.swift
+//  Strike
+//
+//  Created by Spawn on 2016/12/09.
+//  Copyright © 2016年 Spawn. All rights reserved.
+//
+
+import UIKit
+
+class CustomCell: UITableViewCell {
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
+}

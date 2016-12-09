@@ -7,6 +7,7 @@ target 'Strike' do
 
   # Pods for Strike
   pod 'RealmSwift'
+  pod 'Eureka', '~> 2.0.0-beta.1'
 
 end
 post_install do |installer|

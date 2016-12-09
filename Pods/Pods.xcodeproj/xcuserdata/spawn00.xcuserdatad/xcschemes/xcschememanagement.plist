@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Eureka.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Strike.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>18C31F79AFB310A2FE451052935C724E</key>
+		<key>568467DC4CDE6756F2E27229A1AB2D5A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C6B7F48B65F5399646A9B70A41981D5A</key>
+		<key>68F180A100A6334F866E1B55D332472A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DE060FE7A0331150E8C7BB9EC6F99CF1</key>
+		<key>873B1A0D84F1FF2C0ECD8A2440705B43</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E7F9E09EA0101FCDC3DC18D7EDD285AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
