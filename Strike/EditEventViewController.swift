@@ -45,10 +45,20 @@ class EditViewController: FormViewController {
         
             +++ Section()
             <<< DateRow {
-                $0.tag = "DateRow"
+                $0.tag = "ReleaceDateRow"
                 $0.title = "発売日"
                 $0.value = Date()
-                }
+            }
+            <<< DateRow {
+                $0.tag = "DeadLineDateRow"
+                $0.title = "入金締め切り"
+                $0.value = Date()
+            }
+            <<< DateRow {
+                $0.tag = "ShowDateRow"
+                $0.title = "公演日"
+                $0.value = Date()
+        }
 
     }
 }
