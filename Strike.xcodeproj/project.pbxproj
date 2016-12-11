@@ -63,15 +63,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9A1ECD731DFCE3FD00D7263F /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				9AD5C3981DD1E390002194F8 /* EventsTableViewController.swift */,
-				9AF6228E1DFAC81700106ABC /* EditEventViewController.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
 		9A1ECD741DFCE42E00D7263F /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,12 +93,13 @@
 			isa = PBXGroup;
 			children = (
 				9A1ECD741DFCE42E00D7263F /* Model */,
-				9A1ECD731DFCE3FD00D7263F /* Controllers */,
 				9A33AA8F1DD1E16300F89BC6 /* AppDelegate.swift */,
 				9A33AA931DD1E16300F89BC6 /* Main.storyboard */,
 				9A33AA961DD1E16300F89BC6 /* Assets.xcassets */,
 				9A33AA981DD1E16300F89BC6 /* LaunchScreen.storyboard */,
 				9A33AA9B1DD1E16300F89BC6 /* Info.plist */,
+				9AD5C3981DD1E390002194F8 /* EventsTableViewController.swift */,
+				9AF6228E1DFAC81700106ABC /* EditEventViewController.swift */,
 			);
 			path = Strike;
 			sourceTree = "<group>";
