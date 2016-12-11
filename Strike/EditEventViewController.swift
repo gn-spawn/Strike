@@ -16,13 +16,13 @@ class EditViewController: FormViewController {
     @IBAction func onSave(_ sender: UIBarButtonItem) {
         // バリデーションする必要あり
         let row: TextRow? = form.rowBy(tag: "EventTitleRow")
-        let toDo = ToDo()
-        toDo.title = (row?.value)!
+        let event = Event()
+        event.title = (row?.value)!
         
         do {
             let reaml = try Realm()
             try reaml.write({ () -> Void in
-                reaml.add(toDo)
+                reaml.add(event)
             })
         } catch  {
             print("保存失敗")

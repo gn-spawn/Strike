@@ -9,9 +9,9 @@
 import UIKit
 import RealmSwift
 
-class TodoTableViewController: UITableViewController {
+class EventTableViewController: UITableViewController {
 
-    var todoItem: Results<ToDo>!
+    var eventItem: Results<Event>!
     
     // for UIcolor
     struct UIColorUtil {
@@ -38,7 +38,7 @@ class TodoTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         do {
             let realm = try Realm()
-            todoItem = realm.objects(ToDo.self)
+            eventItem = realm.objects(Event.self)
             tableView.reloadData()
             print("OK")
         } catch {
@@ -66,13 +66,13 @@ class TodoTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return todoItem.count
+        return eventItem.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier: "Cell")
         
-        let object = todoItem[indexPath.row]
+        let object = eventItem[indexPath.row]
         cell.textLabel?.text = object.title
         cell.backgroundColor = UIColorUtil.rgb(rgbValue: 0xedf3ff)
 
@@ -96,7 +96,7 @@ class TodoTableViewController: UITableViewController {
             do {
                 let realm = try Realm()
                 try realm.write {
-                    realm.delete(self.todoItem[indexPath.row])
+                    realm.delete(self.eventItem[indexPath.row])
                 }
             } catch {
                 
