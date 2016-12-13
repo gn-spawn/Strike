@@ -15,9 +15,15 @@ class EditViewController: FormViewController {
     
     @IBAction func onSave(_ sender: UIBarButtonItem) {
         // バリデーションする必要あり
-        let row: TextRow? = form.rowBy(tag: "EventTitleRow")
+        let titleRow: TextRow? = form.rowBy(tag: "EventTitleRow")
+        let releaceRow: DateRow = form.rowBy(tag: "ReleaceDateRow")!
+        let deadLineRow: DateRow = form.rowBy(tag: "DeadLineDateRow")!
+        let showRow:DateRow = form.rowBy(tag: "ShowDateRow")!
         let event = Event()
-        event.title = (row?.value)!
+        event.title = (titleRow?.value)!
+        event.releaceDate = releaceRow.value
+        event.deadLineDate = deadLineRow.value
+        event.showDate = showRow.value
         
         do {
             let reaml = try Realm()
