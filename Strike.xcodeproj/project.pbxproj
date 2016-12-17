@@ -12,10 +12,38 @@
 		9A33AA951DD1E16300F89BC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A33AA931DD1E16300F89BC6 /* Main.storyboard */; };
 		9A33AA971DD1E16300F89BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A33AA961DD1E16300F89BC6 /* Assets.xcassets */; };
 		9A33AA9A1DD1E16300F89BC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A33AA981DD1E16300F89BC6 /* LaunchScreen.storyboard */; };
+		9AB4A23F1E05F90B00A7F098 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB4A23E1E05F90B00A7F098 /* NotificationCenter.framework */; };
+		9AB4A2421E05F90B00A7F098 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4A2411E05F90B00A7F098 /* TodayViewController.swift */; };
+		9AB4A2451E05F90B00A7F098 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4A2431E05F90B00A7F098 /* MainInterface.storyboard */; };
+		9AB4A2491E05F90B00A7F098 /* Strike-extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9AB4A23D1E05F90B00A7F098 /* Strike-extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9AD5C3991DD1E390002194F8 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5C3981DD1E390002194F8 /* EventsTableViewController.swift */; };
 		9AD5C39D1DD1E8FB002194F8 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5C39C1DD1E8FB002194F8 /* Event.swift */; };
 		9AF6228F1DFAC81700106ABC /* EditEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6228E1DFAC81700106ABC /* EditEventViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9AB4A2471E05F90B00A7F098 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A33AA841DD1E16300F89BC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AB4A23C1E05F90B00A7F098;
+			remoteInfo = "Strike-extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9AB4A24D1E05F90C00A7F098 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9AB4A2491E05F90B00A7F098 /* Strike-extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		26A11C7EBC7A30D83FD55B50 /* Pods-Strike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Strike.release.xcconfig"; path = "Pods/Target Support Files/Pods-Strike/Pods-Strike.release.xcconfig"; sourceTree = "<group>"; };
@@ -28,6 +56,11 @@
 		9A33AA9B1DD1E16300F89BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A54CB611DD33EBD00154874 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		9A54CB621DD33EBD00154874 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9AB4A23D1E05F90B00A7F098 /* Strike-extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Strike-extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AB4A23E1E05F90B00A7F098 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		9AB4A2411E05F90B00A7F098 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		9AB4A2441E05F90B00A7F098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		9AB4A2461E05F90B00A7F098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AD5C3981DD1E390002194F8 /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		9AD5C39C1DD1E8FB002194F8 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		9AF6228E1DFAC81700106ABC /* EditEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditEventViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +73,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				69C30772DA89BA9F34812CCE /* Pods_Strike.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AB4A23A1E05F90B00A7F098 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AB4A23F1E05F90B00A7F098 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				6996607C8FC2CBAC0997D3A5 /* Pods_Strike.framework */,
+				9AB4A23E1E05F90B00A7F098 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -75,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				9A33AA8E1DD1E16300F89BC6 /* Strike */,
+				9AB4A2401E05F90B00A7F098 /* Strike-extension */,
 				9A33AA8D1DD1E16300F89BC6 /* Products */,
 				21FEA7B26B543BBE21CF6B22 /* Pods */,
 				578019D79CEB36F6C4FF98EC /* Frameworks */,
@@ -85,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				9A33AA8C1DD1E16300F89BC6 /* Strike.app */,
+				9AB4A23D1E05F90B00A7F098 /* Strike-extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +148,16 @@
 			path = Strike;
 			sourceTree = "<group>";
 		};
+		9AB4A2401E05F90B00A7F098 /* Strike-extension */ = {
+			isa = PBXGroup;
+			children = (
+				9AB4A2411E05F90B00A7F098 /* TodayViewController.swift */,
+				9AB4A2431E05F90B00A7F098 /* MainInterface.storyboard */,
+				9AB4A2461E05F90B00A7F098 /* Info.plist */,
+			);
+			path = "Strike-extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,15 +174,34 @@
 				DB151078D6C91B7D95879C07 /* [CP] Copy Pods Resources */,
 				B17BBB77153EC5B7F160F1DD /* 📦 Embed Pods Frameworks */,
 				96B807FFD8D397F04C6AAA29 /* 📦 Copy Pods Resources */,
+				9AB4A24D1E05F90C00A7F098 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9AB4A2481E05F90B00A7F098 /* PBXTargetDependency */,
 			);
 			name = Strike;
 			productName = Strike;
 			productReference = 9A33AA8C1DD1E16300F89BC6 /* Strike.app */;
 			productType = "com.apple.product-type.application";
+		};
+		9AB4A23C1E05F90B00A7F098 /* Strike-extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AB4A24C1E05F90C00A7F098 /* Build configuration list for PBXNativeTarget "Strike-extension" */;
+			buildPhases = (
+				9AB4A2391E05F90B00A7F098 /* Sources */,
+				9AB4A23A1E05F90B00A7F098 /* Frameworks */,
+				9AB4A23B1E05F90B00A7F098 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Strike-extension";
+			productName = "Strike-extension";
+			productReference = 9AB4A23D1E05F90B00A7F098 /* Strike-extension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -136,12 +209,17 @@
 		9A33AA841DD1E16300F89BC6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0810;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Spawn;
 				TargetAttributes = {
 					9A33AA8B1DD1E16300F89BC6 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 9MKM87RFK2;
+						ProvisioningStyle = Automatic;
+					};
+					9AB4A23C1E05F90B00A7F098 = {
+						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 9MKM87RFK2;
 						ProvisioningStyle = Automatic;
 					};
@@ -160,6 +238,7 @@
 			projectRoot = "";
 			targets = (
 				9A33AA8B1DD1E16300F89BC6 /* Strike */,
+				9AB4A23C1E05F90B00A7F098 /* Strike-extension */,
 			);
 		};
 /* End PBXProject section */
@@ -172,6 +251,14 @@
 				9A33AA9A1DD1E16300F89BC6 /* LaunchScreen.storyboard in Resources */,
 				9A33AA971DD1E16300F89BC6 /* Assets.xcassets in Resources */,
 				9A33AA951DD1E16300F89BC6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AB4A23B1E05F90B00A7F098 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AB4A2451E05F90B00A7F098 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +369,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9AB4A2391E05F90B00A7F098 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AB4A2421E05F90B00A7F098 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9AB4A2481E05F90B00A7F098 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9AB4A23C1E05F90B00A7F098 /* Strike-extension */;
+			targetProxy = 9AB4A2471E05F90B00A7F098 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9A33AA931DD1E16300F89BC6 /* Main.storyboard */ = {
@@ -301,6 +404,14 @@
 				9A54CB621DD33EBD00154874 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9AB4A2431E05F90B00A7F098 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AB4A2441E05F90B00A7F098 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -431,6 +542,34 @@
 			};
 			name = Release;
 		};
+		9AB4A24A1E05F90C00A7F098 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 9MKM87RFK2;
+				INFOPLIST_FILE = "Strike-extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.otintin.Strike.Strike-extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9AB4A24B1E05F90C00A7F098 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 9MKM87RFK2;
+				INFOPLIST_FILE = "Strike-extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.otintin.Strike.Strike-extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -451,6 +590,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		9AB4A24C1E05F90C00A7F098 /* Build configuration list for PBXNativeTarget "Strike-extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AB4A24A1E05F90C00A7F098 /* Debug */,
+				9AB4A24B1E05F90C00A7F098 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
