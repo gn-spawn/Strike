@@ -11,6 +11,8 @@ import RealmSwift
 
 class EventTableViewController: UITableViewController {
 
+    var realm: Realm!
+
     var eventItem: Results<Event>!
     
     // for UIcolor
@@ -29,6 +31,10 @@ class EventTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // RealmDBをAppGroupで使うために設定
+        let directory: URL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: GROUP_ID)!
+        let fileURL = directory.appendingPathComponent(DB_NAME)
+
         // 編集ボタン
         navigationItem.leftBarButtonItem = editButtonItem
         // Uncomment the following line to preserve selection between presentations
@@ -37,7 +43,7 @@ class EventTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         do {
-            let realm = try Realm()
+            realm = try! Realm(fileURL: fileURL)
             eventItem = realm.objects(Event.self)
             tableView.reloadData()
             print("OK")
