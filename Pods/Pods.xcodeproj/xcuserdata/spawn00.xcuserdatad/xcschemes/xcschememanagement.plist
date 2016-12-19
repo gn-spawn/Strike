@@ -9,17 +9,32 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Strike-extension.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Strike.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Realm.xcscheme</key>
+		<key>Realm-iOS10.1.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>RealmSwift.xcscheme</key>
+		<key>Realm-iOS10.2.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RealmSwift-iOS10.1.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RealmSwift-iOS10.2.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,12 +42,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>568467DC4CDE6756F2E27229A1AB2D5A</key>
+		<key>010D42E92AF61AAEB7379C4AA9ABDDAE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>68F180A100A6334F866E1B55D332472A</key>
+		<key>2FC620145CBA6A134203299DADBA0E15</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7C002BACC8F73C2237C2FA557F640F5A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E7F9E09EA0101FCDC3DC18D7EDD285AD</key>
+		<key>D2323D589D774111F6FF1E5F0C4F343B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD8A5DF8A84311849996ED45E87CD2FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E69D873853547A24BDEF2294C514DEBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

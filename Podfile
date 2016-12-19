@@ -10,6 +10,12 @@ target 'Strike' do
   pod 'Eureka', '~> 2.0.0-beta.1'
 
 end
+
+target 'Strike-extension' do
+  use_frameworks!
+  pod 'RealmSwift'
+end
+
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
