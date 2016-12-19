@@ -12,6 +12,8 @@
 		9A33AA951DD1E16300F89BC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A33AA931DD1E16300F89BC6 /* Main.storyboard */; };
 		9A33AA971DD1E16300F89BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A33AA961DD1E16300F89BC6 /* Assets.xcassets */; };
 		9A33AA9A1DD1E16300F89BC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A33AA981DD1E16300F89BC6 /* LaunchScreen.storyboard */; };
+		9A68FDC81E07EBB90051B263 /* SharedFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A68FDC71E07EBB90051B263 /* SharedFile.swift */; };
+		9A68FDC91E07EBB90051B263 /* SharedFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A68FDC71E07EBB90051B263 /* SharedFile.swift */; };
 		9AB4A23F1E05F90B00A7F098 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB4A23E1E05F90B00A7F098 /* NotificationCenter.framework */; };
 		9AB4A2421E05F90B00A7F098 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4A2411E05F90B00A7F098 /* TodayViewController.swift */; };
 		9AB4A2451E05F90B00A7F098 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4A2431E05F90B00A7F098 /* MainInterface.storyboard */; };
@@ -56,6 +58,7 @@
 		9A33AA9B1DD1E16300F89BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A54CB611DD33EBD00154874 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		9A54CB621DD33EBD00154874 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9A68FDC71E07EBB90051B263 /* SharedFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedFile.swift; sourceTree = "<group>"; };
 		9AB4A23D1E05F90B00A7F098 /* Strike-extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Strike-extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB4A23E1E05F90B00A7F098 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		9AB4A2411E05F90B00A7F098 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +144,7 @@
 				9AB4A24E1E05F94200A7F098 /* Strike.entitlements */,
 				9A1ECD741DFCE42E00D7263F /* Model */,
 				9A33AA8F1DD1E16300F89BC6 /* AppDelegate.swift */,
+				9A68FDC71E07EBB90051B263 /* SharedFile.swift */,
 				9A33AA931DD1E16300F89BC6 /* Main.storyboard */,
 				9A33AA961DD1E16300F89BC6 /* Assets.xcassets */,
 				9A33AA981DD1E16300F89BC6 /* LaunchScreen.storyboard */,
@@ -376,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A68FDC81E07EBB90051B263 /* SharedFile.swift in Sources */,
 				9AD5C39D1DD1E8FB002194F8 /* Event.swift in Sources */,
 				9AD5C3991DD1E390002194F8 /* EventsTableViewController.swift in Sources */,
 				9AF6228F1DFAC81700106ABC /* EditEventViewController.swift in Sources */,
@@ -387,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A68FDC91E07EBB90051B263 /* SharedFile.swift in Sources */,
 				9AB4A2421E05F90B00A7F098 /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -616,6 +622,7 @@
 				9AB4A24B1E05F90C00A7F098 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
