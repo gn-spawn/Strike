@@ -32,9 +32,13 @@ class EventTableViewController: UITableViewController {
         super.viewDidLoad()
         
         // RealmDBをAppGroupで使うために設定
-        let directory: URL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: GROUP_ID)!
-        let fileURL = directory.appendingPathComponent(DB_NAME)
-
+        let directory: URL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.otintin.strike")!
+        var config = Realm.Configuration()
+        config.fileURL = directory.deletingLastPathComponent()
+            .appendingPathComponent("db.realm")
+        Realm.Configuration.defaultConfiguration = config
+        
+        realm = try! Realm()
         // 編集ボタン
         navigationItem.leftBarButtonItem = editButtonItem
         // Uncomment the following line to preserve selection between presentations
@@ -43,7 +47,6 @@ class EventTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
 //        do {
-        realm = try! Realm(fileURL: fileURL)
         eventItem = realm.objects(Event.self)
         tableView.reloadData()
         print("OK")

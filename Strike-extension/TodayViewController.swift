@@ -8,13 +8,30 @@
 
 import UIKit
 import NotificationCenter
+import RealmSwift
 
 class TodayViewController: UIViewController, NCWidgetProviding {
+    
+    var realm: Realm!
+    var eventList: Results<Event>{
+        get {
+            return realm.objects(Event.self)
+        }
+    }
         
-    @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
+        let directory: URL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.otintin.strike")!
+        var config = Realm.Configuration()
+        config.fileURL = directory.deletingLastPathComponent()
+            .appendingPathComponent("db.realm")
+        Realm.Configuration.defaultConfiguration = config
+        do {
+            realm = try! Realm()
+        } catch  {
+            print(error)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,4 +49,20 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         completionHandler(NCUpdateResult.newData)
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return eventList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        let event = eventList[indexPath.row]
+        
+        cell.textLabel!.text = event.title
+        cell.detailTextLabel!.text = "\(event.deadLineDate)"
+        
+        return cell
+        
+    }
 }
